@@ -1,0 +1,49 @@
+﻿@page
+@model CadastroDeVeiculos.Pages.cadastroModel
+@{
+}
+<div class="text-center">
+    <h2>Cadastrar Veículos</h2> <h6>dados</h6>
+</div>
+<hr></hr>
+
+@if (Model.erro.Length > 0)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>@Model.erro</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="fechar"></button>
+    </div>
+}
+<form method="post">
+    <div class="row mb-3">
+        <label>Placa</label>
+        <div class="col-sm-6">
+            <input type="text" name="placa" value="@Model.veiculosInfo.placa"></input>
+        </div>
+        <label>Renavam</label>
+        <div class="col-sm-6">
+            <input type="text" name="renavam" value="@Model.veiculosInfo.renavam"></input>
+        </div>
+        <label>Nome do Proprietário</label>
+        <div class="col-sm-6">
+            <input type="text" name="nome" value="@Model.veiculosInfo.nome"></input>
+        </div>
+        <label>CPF</label>
+        <div class="col-sm-6">
+            <input type="text" name="cpf" value="@Model.veiculosInfo.cpf"></input>
+        </div>
+    </div>
+
+    @if (Model.sucesso.Length > 0)
+{
+    <div class="alert alert-sucess alert-dismissible fade show" role="alert" style="background-color:green">
+        <strong>@Model.sucesso</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="fechar"></button>
+    </div>
+}
+    
+        <button type="submit" class="btn btn-success">Cadastrar</button>
+ 
+        
+
+</FORM>

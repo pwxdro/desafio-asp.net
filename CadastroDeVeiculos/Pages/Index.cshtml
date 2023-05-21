@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h2>Lista de Veículos</h2><h5> cadastrados no sistema</h5>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="w-25 p-3">Placa</th>
+            <th class="w-50 p-3">Renavam</th>
+            <th class="w-25 p-3">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var veiculo in Model.ListaVeiculos)
+        {
+            <tr>
+                <td class="w-25 p-3">@veiculo.placa</td>
+                <td class="w-50 p-3">@veiculo.renavam</td>
+                <td class="w-25 p-3">
+                    <a style="width:45%" class="btn btn-warning btn-sm" href="">Editar</a>
+                    <a style="width:45%" class="btn btn-primary btn-sm" href="/visualizar?placa=@veiculo.placa">Visualizar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class='btn btn-success btn-sm' href="/cadastro">Cadastrar veículo</a>

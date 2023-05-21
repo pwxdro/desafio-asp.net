@@ -1,0 +1,22 @@
+﻿@page
+@model CadastroDeVeiculos.Pages.visualizarModel
+@{
+}
+<div class="text-center">
+	<h2>Visualizar Dados</h2><h5 style="color:gray">veículo</h5>
+</div>
+<hr></hr>
+<div>
+    @foreach (var veiculo in Model.ListaVeiculos)
+    {
+        
+            <strong>Placa: </strong> @veiculo.placa<br>
+            <strong>Renavam: </strong> @veiculo.renavam<br>
+            <strong>Proprietario: </strong> @veiculo.nome<br>
+            <strong>CPF: </strong> @veiculo.cpf
+
+            
+    }
+</div>
+<hr></hr>
+<a class="btn btn-primary btn-sm" href="/Index">Voltar</a>
