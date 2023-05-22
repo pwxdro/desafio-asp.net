@@ -1,0 +1,6 @@
+CREATE TABLE veiculos (
+    placa VARCHAR(7) NOT NULL,
+    renavam BIGINT NOT NULL,
+    nome VARCHAR (150) NOT NULL,
+    cpf BIGINT NOT NULL
+);
